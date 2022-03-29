@@ -1,20 +1,21 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const $1 = document.querySelector.bind(document);
+const $$1 = document.querySelectorAll.bind(document);
 
 // Tạm thời
 
-const setting = $$('.header-function__item');
+const setting = $$1('.header-function__item');
 console.log(setting )
 setting[3].addEventListener('click', function() {
-    $('.header-setting').classList.toggle('active');
+    $1('.header-setting').classList.toggle('active');
 });
 
 // Click vào option hiện nút đăng xuất
 
-const optionVip = $('.more-icon');
+const optionVip = $1('.more-icon');
 
 optionVip.onclick = function() {
-    $('.signout-wapper').classList.toggle('active');
-
+    $1('.signout-wapper').classList.toggle('active');
 }
     
+
+      

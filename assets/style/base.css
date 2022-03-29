@@ -14,6 +14,8 @@
     --navbarCategories-height: calc(100vh - var(--playerControl-height) - var(--creatList-height) - var(--navMunu-height));
 
     --search-color: #2e2739;
+
+    
 }
 
 * {
@@ -30,4 +32,13 @@ html {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+i {
+    display: block;
+}
+
 
