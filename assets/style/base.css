@@ -38,7 +38,16 @@ html {
 }
 
 i {
-    display: block;
+    display: inline-block;
 }
+
+.alc {
+    align-items: center;
+}
+
+.tlc {
+    text-align: center;
+}
+
 
 
