@@ -707,16 +707,18 @@
                         <i class="bi bi-arrow-repeat"></i>
                     </button>
                 </div>
-                <div class="progress-block df">
+                <div class="progress-block dfs">
                     <span class="start-time">00:00</span>
-                    <input type="range" class="progress" value="5" step="1" min="0" max="100">
-                    <div class="progress__track song--track">
-                        <div class="progress__track-update" ></div>
+                    <div class="progress-line">
+                        <input type="range" class="progress" value="5" step="0.1" min="0" max="100">
+                        <div class="progress__track song--track">
+                            <div class="progress__track-update" ></div>
+                        </div>
                     </div>
                     <span class="end-time">00:00</span>
                 </div>
-                <audio id="audio" src=" "></audio>
                 
+                <audio id="audio" src=" "></audio>
             </div>
 
             <div class="player-option">
@@ -733,10 +735,10 @@
                     <i class="player-option__icon bi bi-volume-up"></i>
                 </div>
                 <div class="player-option__progress-volume">
-                    <input type="range" class="progress" value="0" step="1" min="0" max="100">
-                    <div class="progress__track volume--track">
-                        <div class="progress__track-update" ></div>
-                    </div>
+                        <input type="range" class="progress" value="0" step="1" min="0" max="100">
+                        <div class="progress__track volume--track">
+                            <div class="progress__track-update" ></div>
+                        </div>
                 </div>
                 <div class="player-option__note-list">
                     <i class="player-option__icon bi bi-music-note-list"></i>

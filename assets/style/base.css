@@ -49,5 +49,11 @@ i {
     text-align: center;
 }
 
+.dfs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 

@@ -39,7 +39,10 @@ const songCurrentSingle = $1('.playlist-songs__name .playlist-songs__name-singer
 const timeDuration = $1('.end-time');
 const timeDurationPlaylist = $$1('.playlist-songs__duration')
 const timeUpdate = $1('.start-time');
-const nextBtn = $1('.btn-next')
+const nextBtn = $1('.btn-next');
+const preBtn = $1('.btn-pre');
+const progressUpdate = $1('.progress__track-update')
+const progress = $1('.progress')
 
 const app = {
     currentIndex : 0,
@@ -294,27 +297,44 @@ const app = {
             if(audio.duration)
             {
                 // console.log(audio.duration)
+				
+                secondTime = Math.floor((audio.currentTime))
+				// update thanh progress
+
+				// progress.value = `${(secondTime / audio.duration) *100}`
+
+				progressUpdate.style.width = `${((secondTime / audio.duration) *100).toFixed(1)}%`
+				
+				// update start time
+				timeUpdate.textContent = `0${app.fancyTimeFormat(secondTime)}`  
+				
                 
-                secondTime = Math.floor((audio.currentTime / audio.duration).toFixed(2) * 100)
-                if(secondTime > 0)
-                {
-                    timeUpdate.textContent = `00:0${secondTime}`
-                }
-                if(secondTime > 9)
-                {
-                    timeUpdate.textContent = `00:${secondTime}`
-                }
+				
             }
- 
+
         }
 
         // Khi next Song
         nextBtn.onclick = function() {
-            console.log(123)
-            app.nextSong()
+            app.nextSong();
+            audio.play();
         }
 
+		// Khi pre song
+		preBtn.onclick = function() {
+			app.preSong();
+			audio.play();
+		}
+
+		progress.onchange = function(e) {
+			const seekTime = e.target.value * audio.duration / 100;
+			audio.currentTime = seekTime;
+
+		}
+
     },
+
+	
 
     loadCurrentSong: function() {
 
@@ -328,29 +348,47 @@ const app = {
             if(audio.duration)
             {
                 let duration = Math.floor(audio.duration)
-                let minutes = Math.floor(duration / 60)
-                timeDuration.textContent = `0${minutes}:${duration - minutes*60 > 9 ? minutes :`0${duration - minutes*60}`}`
-                // timeDurationPlaylist.textContent = audio.duration;
-
-
-            }
-            else
-            {
-                timeUpdate.textContent = '00:00'
+                timeDuration.textContent = `0${app.fancyTimeFormat(duration)}`
             }
         };
-
-       
     },
+
+	fancyTimeFormat: function(duration)
+	{   
+		// Hours, minutes and seconds
+		var hrs = Math.floor(duration / 3600);
+		var mins = Math.floor((duration % 3600) / 60);
+		var secs = Math.floor(duration % 60);
+
+		// Output like "1:01" or "4:03:59" or "123:03:59"
+		var ret = "";
+
+		if (hrs > 0) {
+			ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+		}
+
+		ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+		ret += "" + secs;
+		return ret;
+	},
 
     nextSong: function() {
         this.currentIndex++;
-        if( this.currentIndex++ >= this.songs.length )
+        if( this.currentIndex >= this.songs.length  )
         {
-            this.currentSong = 0;
+            this.currentIndex = 0;
         }
         this.loadCurrentSong()
     },
+
+	preSong: function() {
+		this.currentIndex--;
+		if ( this.currentIndex < 0 )
+		{
+			this.currentIndex = this.songs.length;
+		}
+        this.loadCurrentSong()
+	},
 
     start: function() {
         // Định nghĩa các thuộc tính cho Object
@@ -366,6 +404,7 @@ const app = {
 
         // Load bài hát đầu tiên
         this.loadCurrentSong();
+
         // this.nextSong()
         this.renderPlayList();
         this.renderItemsNew();
