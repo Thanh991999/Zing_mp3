@@ -15,6 +15,7 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
       />
     <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/helper.css">
     <link rel="stylesheet" href="./assets/style/grid.css">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/responsive.css">
@@ -23,326 +24,354 @@
 </head>
 <body>
     <div class="main">
-        <div class="zm">
-            <div class="zm-sidebar">
-                <div class="zm-sidebar__wrap">
-                    <div class="zm-navbar">
-                        <img class="zm-navbar__logo" src="./assets/img/logo/logo-zing.svg" alt="">
-                    </div>
-                    <div class="zm-navbar__menu">
-                        <ul class="zm-navbar__menu-list">
-                            <li class="zm-navbar__menu-item active">
-                                <a href="#" class="zm-navbar__menu-link">
-                                    <i class="zm-navbar__menu-icon bi bi-person-bounding-box"></i>
-                                    Cá Nhân
-                                </a>
-                            </li>
-                            <li class="zm-navbar__menu-item">
-                                <a href="#" class="zm-navbar__menu-link">
-                                    
-                                    <i class="zm-navbar__menu-icon bi bi-vinyl"></i>
-                                    Khám Phá
-                                </a>
-                            </li>
-                            <li class="zm-navbar__menu-item">
-                                <a href="#" class="zm-navbar__menu-link">
-                                    <i class="zm-navbar__menu-icon bi bi-music-note-list"></i>
-                                    #zingchart
-                                </a>
-                            </li>
-                            <li class="zm-navbar__menu-item">
-                                <a href="#" class="zm-navbar__menu-link">
-                                    <i class="zm-navbar__menu-icon bi bi-broadcast"></i>
-                                    Radio
-                                </a>
-                            </li>
-                            <li class="zm-navbar__menu-item">
-                                <a href="#" class="zm-navbar__menu-link">
-                                    <i class="zm-navbar__menu-icon bi bi-newspaper"></i>
-                                    Theo dõi
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="navbar-line"></div>
-
-                    <div class="zm-navbar__category-wrap">
-                        <div class="zm-navbar__category">
-                            <ul class="zm-navbar__menu-list">
-                                <li class="zm-navbar__menu-item">
-                                    <a href="#" class="zm-navbar__menu-link">
-                                        <i class="zm-navbar__menu-icon bi bi-music-note-beamed"></i>
-                                        Nhạc Mới
-                                    </a>
-                                </li>
-                                <li class="zm-navbar__menu-item">
-                                    <a href="#" class="zm-navbar__menu-link">
-                                        <i class="zm-navbar__menu-icon bi bi-card-text"></i>
-                                        Thể Loại
-                                    </a>
-                                </li>
-                                <li class="zm-navbar__menu-item">
-                                    <a href="#" class="zm-navbar__menu-link">
-                                        <i class="zm-navbar__menu-icon bi bi-trophy"></i>
-                                        Top 100
-                                    </a>
-                                </li>
-                                <li class="zm-navbar__menu-item">
-                                    <a href="#" class="zm-navbar__menu-link">
-                                        <i class="zm-navbar__menu-icon bi bi-camera-video"></i>
-                                        MV
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                        </div>
-    
-                        <div class="zm-navbar__advertisement">
-                            <p class="zm-navbar__title">
-                                Nghe nhạc không quảng cáo cùng kho nhạc VIP
-                            </p>
-                            <a href="#" class="zm-navbar__up-vip">Nâng cấp vip</a>
-                        </div>
-
-                        <div class="zm-navbar__liblary-wrap">
-                            <div class="zm-navbar__liblary">
-                                <span>Thư Viện</span>
-                                <div class="zm-navbar__liblary-active">
-                                    <i class="zm-navbar__liblary-icon bi bi-pencil"></i>
-                                    <div class="pen-repair">Chỉnh sửa</div>
-                                </div>
-                            </div>
-
-
-                            <ul class="zm-navbar__liblary-list">
-                                <li class="zm-navbar__liblary-item">
-                                    <a href="#" class="zm-navbar__liblary-link">
-                                        <img src="./assets/img/library/Baihat.svg" alt="Baihat.img">
-                                        <span>Bài hát</span>
-                                    </a>
-                                </li>
-                                <li class="zm-navbar__liblary-item">
-                                    <a href="#" class="zm-navbar__liblary-link">
-                                        <img src="./assets/img/library/Playlists.svg" alt="Playlists.img">
-                                        <span>Playlist</span>
-                                    </a>
-                                </li>
-                                <li class="zm-navbar__liblary-item">
-                                    <a href="#" class="zm-navbar__liblary-link">
-                                        <img src="./assets/img/library/Ganday.svg" alt="Ganday.img">
-                                        <span>Gần đây</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-     
-                    </div>
-
-                    <div class="creat-list">
-                        <i class="creat-list__icon bi bi-plus"></i>
-                        <p>Tạo playlist mới</p>
-                    </div>
+      <div class="zm">
+        <aside class="zm-sidebar">
+          <div class="zm-sidebar__wrap h-100">
+            <img class="zm-sidebar__logo" src="./assets/img/logo/logo-zing.svg" alt="">
+            <nav class="zm-navbar__menu p-relative">
+              <ul class="mb-14">
+                <li class="menu__item active">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-person-bounding-box"></i>
+                    <span>Cá Nhân</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-vinyl"></i>
+                    <span>Khám Phá</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-music-note-list"></i>
+                  <span>#zingchart</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-broadcast"></i>
+                    <span>Radio</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-newspaper"></i>
+                    <span>Theo dõi</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="zm-navbar__category mt-14">
+              <ul class="mb-10">
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-music-note-beamed"></i>
+                    <span>Nhạc Mới</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-card-text"></i>
+                    <span>Thể Loại</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-trophy"></i>
+                    <span>Top 100</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link c-gap-13 d-flex middle-xs">
+                    <i class="menu__icon bi bi-camera-video"></i>
+                    <span>MV</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="zm-navbar__advertisement d-flex fd-column r-gap-10">
+                <p class="zm-navbar__title ta-center">
+                    Nghe nhạc không quảng cáo cùng kho nhạc VIP
+                </p>
+                <a href="#" class="btn btn-primary tt-up ta-center m-auto">Nâng cấp vip</a>
+              </div>
+              <div class="zm-navbar__liblary-wrap">
+                <div class="zm-navbar__liblary fw-700 d-flex between-xs">
+                  <span class="tt-up">Thư Viện</span>
+                  <div class="zm-navbar__liblary-active">
+                    <i class="zm-navbar__liblary-icon p-relative c-pointer bi bi-pencil"></i>
+                    <div class="pen-repair ta-center p-absolute d-none">Chỉnh sửa</div>
+                  </div>
                 </div>
+                <ul class="d-flex gap-15 fd-column">
+                  <li class="zm-navbar__liblary-item">
+                    <a href="#" class="zm-navbar__liblary-link c-gap-13 fw-300 middle-xs d-flex">
+                      <img src="./assets/img/library/Baihat.svg" alt="Baihat.img">
+                      <span>Bài hát</span>
+                    </a>
+                  </li>
+                  <li class="zm-navbar__liblary-item">
+                    <a href="#" class="zm-navbar__liblary-link c-gap-13 fw-300 middle-xs d-flex">
+                      <img src="./assets/img/library/Playlists.svg" alt="Playlists.img">
+                      <span>Playlist</span>
+                    </a>
+                  </li>
+                  <li class="zm-navbar__liblary-item">
+                    <a href="#" class="zm-navbar__liblary-link c-gap-13 fw-300 middle-xs d-flex">
+                      <img src="./assets/img/library/Ganday.svg" alt="Ganday.img">
+                      <span>Gần đây</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="creat-list d-flex middle-xs p-fixed">
+              <i class="creat-list__icon bi bi-plus"></i>
+              <p>Tạo playlist mới</p>
             </div>
-
-            <div class="zm-container">
-                <div class="zm-header grid wide">
-                    <div class="header-wrap">
-                        <div class="header">
-                            <div class="header-arrow">
-                                <i class="header-arrow-icon bi bi-arrow-left"></i>
-                                <i class="header-arrow-icon bi bi-arrow-right"></i>
-                            </div>
-                            <div class="header-search">
-                                <i class="header-search__icon bi bi-search"></i>
-                                <input class="header-search__input" type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV...">
-                                <div class="header-search__history">
-                                    <h3 class="history-title">Đề xuất cho bạn</h3>
-                                    <ul class="history-list">
-                                        <li class="history-item">
-                                            <a href="#" class="history-link">
-                                                <i class="history-icon fa-solid fa-arrow-trend-up"></i>
-                                                Chạy ngay đi
-                                            </a>
-                                        </li>
-                                        <li class="history-item">
-                                            <a href="#" class="history-link">
-                                                <i class="history-icon fa-solid fa-arrow-trend-up"></i>
-                                                Ngôi nhà hoa hồng
-                                            </a>
-                                        </li>
-                                        <li class="history-item">
-                                            <a href="#" class="history-link">
-                                                <i class="history-icon fa-solid fa-arrow-trend-up"></i>
-                                                Tháng tư là lời nói dối của em
-                                            </a>
-                                        </li>
-                                        <li class="history-item">
-                                            <a href="#" class="history-link">
-                                                <i class="history-icon fa-solid fa-arrow-trend-up"></i>
-                                                Insomnia
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="header-function">
-                                <ul class="header-function__list">
-                                    <li class="header-function__item">
-                                        <a href="" class="header-function__link">
-                                            <svg width="20" height="20" viewBox="0 0 20 20"><defs><linearGradient id="j32lhg93hd" x1="62.206%" x2="18.689%" y1="70.45%" y2="39.245%"><stop offset="0%" stop-color="#F81212"></stop><stop offset="100%" stop-color="red"></stop></linearGradient><linearGradient id="hjoavsus6g" x1="50%" x2="11.419%" y1="23.598%" y2="71.417%"><stop offset="0%" stop-color="#00F"></stop><stop offset="100%" stop-color="#0031FF"></stop></linearGradient><linearGradient id="la1y5u3dvi" x1="65.655%" x2="25.873%" y1="18.825%" y2="56.944%"><stop offset="0%" stop-color="#FFA600"></stop><stop offset="100%" stop-color="orange"></stop></linearGradient><linearGradient id="2dsmrlvdik" x1="24.964%" x2="63.407%" y1="8.849%" y2="55.625%"><stop offset="0%" stop-color="#13EFEC"></stop><stop offset="100%" stop-color="#00E8DF"></stop></linearGradient><filter id="4a7imk8mze" width="230%" height="230%" x="-65%" y="-65%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="301mo6jeah" width="312.7%" height="312.7%" x="-106.4%" y="-106.4%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="b2zvzgq7fj" width="295%" height="295%" x="-97.5%" y="-97.5%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="a1wq161tvl" width="256%" height="256%" x="-78%" y="-78%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><path id="qtpqrj1oda" d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z"></path><path id="jggzvnjgfc" d="M0 0H20V20H0z"></path><path id="2eiwxjmc7m" d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(2 3)"><mask id="tinejqaasb" fill="#fff"><use xlink:href="#qtpqrj1oda"></use></mask><use fill="#FFF" fill-opacity="0" xlink:href="#qtpqrj1oda"></use><g mask="url(#tinejqaasb)"><g transform="translate(-2 -3)"><mask id="uf3ckvfvpf" fill="#fff"><use xlink:href="#jggzvnjgfc"></use></mask><use fill="#D8D8D8" xlink:href="#jggzvnjgfc"></use><circle cx="8.9" cy="6.8" r="9" fill="url(#j32lhg93hd)" filter="url(#4a7imk8mze)" mask="url(#uf3ckvfvpf)"></circle><circle cx="9.3" cy="13.7" r="5.5" fill="url(#hjoavsus6g)" filter="url(#301mo6jeah)" mask="url(#uf3ckvfvpf)"></circle><circle cx="15.9" cy="6.9" r="6" fill="url(#la1y5u3dvi)" filter="url(#b2zvzgq7fj)" mask="url(#uf3ckvfvpf)"></circle><circle cx="16.4" cy="17.7" r="7.5" fill="url(#2dsmrlvdik)" filter="url(#a1wq161tvl)" mask="url(#uf3ckvfvpf)"></circle></g></g><use fill="#FFF" fill-opacity="0.05" xlink:href="#2eiwxjmc7m"></use></g></svg>
+          </div>
+        </aside>
+        <div class="zm-container">
+            <div class="zm-header container">
+                <div class="header-wrap">
+                    <div class="header">
+                        <div class="header-arrow">
+                            <i class="header-arrow-icon bi bi-arrow-left"></i>
+                            <i class="header-arrow-icon bi bi-arrow-right"></i>
+                        </div>
+                        <div class="header-search">
+                            <i class="header-search__icon bi bi-search"></i>
+                            <input class="header-search__input" type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV...">
+                            <div class="header-search__history">
+                                <h3 class="history-title">Đề xuất cho bạn</h3>
+                                <ul class="history-list">
+                                    <li class="history-item">
+                                        <a href="#" class="history-link">
+                                            <i class="history-icon fa-solid fa-arrow-trend-up"></i>
+                                            Chạy ngay đi
                                         </a>
-                                        <div class="header-function__details">
-                                            Chủ đề
-                                        </div>
                                     </li>
-        
-                                    <li class="header-function__item">
-                                        <a href="" class="header-function__link">
-                                            <span>VIP</span>
+                                    <li class="history-item">
+                                        <a href="#" class="history-link">
+                                            <i class="history-icon fa-solid fa-arrow-trend-up"></i>
+                                            Ngôi nhà hoa hồng
                                         </a>
-                                        <div class="header-function__details header-function__details--vip">
-                                            Nâng cấp VIP
-                                        </div>
                                     </li>
-        
-                                    <li class="header-function__item">
-                                        
-                                        <input type="file" name="uploadSong" id="upBtn">
-                                        
-                                        <label for="upBtn">
-                                            <i class="header-function__icon bi bi-upload"></i>
-                                            <div class="header-function__details">
-                                                Tải lên
-                                            </div>
-                                        </label>
+                                    <li class="history-item">
+                                        <a href="#" class="history-link">
+                                            <i class="history-icon fa-solid fa-arrow-trend-up"></i>
+                                            Tháng tư là lời nói dối của em
+                                        </a>
                                     </li>
-        
-                                    <li class="header-function__item">
-                                        
-                                            <i class="header-function__icon bi bi-gear"></i>
-                                       
-                                        <div class="header-function__details">
-                                            Cài đặt
-                                        </div>
-    
-                                        <div class="header-setting">
-                                            <div class="header-setting__wrap">
-                                                <ul class="header-setting__list">
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="fa-solid fa-ban"></i>
-                                                            Danh sách chặn
-                                                        </div>                                               
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content header-setting__content-sp">
-                                                            <div class="setting__wrap-icon">
-                                                                <i class="bi bi-badge-hd-fill"></i>
-                                                                Chất lượng nhạc
-                                                            </div>
-                                                            <i class="header-setting__icon bi bi-chevron-right"></i>
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content header-setting__content-sp">
-                                                            <div class="setting__wrap-icon">
-                                                                <i class="bi bi-play-circle"></i>
-                                                                Giao diện
-                                                            </div>
-                                                            
-                                                            <i class="header-setting__icon bi bi-chevron-right"></i>
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-calendar-event-fill"></i>
-                                                            Mua code VIP
-                                                        </div>  
-                                                    </li>
-                                                </ul>
-                                            </div>
-    
-                                            <div class="navbar-line__setting"></div>
-    
-                                            <div class="header-setting__subnav">
-                                                <ul class="header-setting__list">
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-info-circle"></i>
-                                                            Giới thiệu
-                                                        </div>                                               
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-flag"></i>
-                                                            Góp ý
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-telephone"></i>
-                                                            Liên hệ
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-badge-ad-fill"></i>
-                                                            Quảng cáo
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-card-text"></i>
-                                                            Thỏa thuận sử dụng
-                                                        </div>  
-                                                    </li>
-    
-                                                    <li class="header-setting__item">
-                                                        <div class="header-setting__content">
-                                                            <i class="bi bi-shield-check"></i>
-                                                            Chính sách bảo mật
-                                                        </div>  
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-    
-                                    </li>
-    
-                                    <li class="header-function__item">
-                                        <a href="" class="header-function__link">
-                                            <img class="header-function__img"  src="./assets/img/anhdaidien.jpg" alt="">
+                                    <li class="history-item">
+                                        <a href="#" class="history-link">
+                                            <i class="history-icon fa-solid fa-arrow-trend-up"></i>
+                                            Insomnia
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="header-function">
+                            <ul class="header-function__list">
+                                <li class="header-function__item">
+                                    <a href="" class="header-function__link">
+                                        <svg width="20" height="20" viewBox="0 0 20 20"><defs><linearGradient id="j32lhg93hd" x1="62.206%" x2="18.689%" y1="70.45%" y2="39.245%"><stop offset="0%" stop-color="#F81212"></stop><stop offset="100%" stop-color="red"></stop></linearGradient><linearGradient id="hjoavsus6g" x1="50%" x2="11.419%" y1="23.598%" y2="71.417%"><stop offset="0%" stop-color="#00F"></stop><stop offset="100%" stop-color="#0031FF"></stop></linearGradient><linearGradient id="la1y5u3dvi" x1="65.655%" x2="25.873%" y1="18.825%" y2="56.944%"><stop offset="0%" stop-color="#FFA600"></stop><stop offset="100%" stop-color="orange"></stop></linearGradient><linearGradient id="2dsmrlvdik" x1="24.964%" x2="63.407%" y1="8.849%" y2="55.625%"><stop offset="0%" stop-color="#13EFEC"></stop><stop offset="100%" stop-color="#00E8DF"></stop></linearGradient><filter id="4a7imk8mze" width="230%" height="230%" x="-65%" y="-65%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="301mo6jeah" width="312.7%" height="312.7%" x="-106.4%" y="-106.4%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="b2zvzgq7fj" width="295%" height="295%" x="-97.5%" y="-97.5%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><filter id="a1wq161tvl" width="256%" height="256%" x="-78%" y="-78%" filterUnits="objectBoundingBox"><feGaussianBlur in="Sourcewraphic" stdDeviation="3.9"></feGaussianBlur></filter><path id="qtpqrj1oda" d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z"></path><path id="jggzvnjgfc" d="M0 0H20V20H0z"></path><path id="2eiwxjmc7m" d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(2 3)"><mask id="tinejqaasb" fill="#fff"><use xlink:href="#qtpqrj1oda"></use></mask><use fill="#FFF" fill-opacity="0" xlink:href="#qtpqrj1oda"></use><g mask="url(#tinejqaasb)"><g transform="translate(-2 -3)"><mask id="uf3ckvfvpf" fill="#fff"><use xlink:href="#jggzvnjgfc"></use></mask><use fill="#D8D8D8" xlink:href="#jggzvnjgfc"></use><circle cx="8.9" cy="6.8" r="9" fill="url(#j32lhg93hd)" filter="url(#4a7imk8mze)" mask="url(#uf3ckvfvpf)"></circle><circle cx="9.3" cy="13.7" r="5.5" fill="url(#hjoavsus6g)" filter="url(#301mo6jeah)" mask="url(#uf3ckvfvpf)"></circle><circle cx="15.9" cy="6.9" r="6" fill="url(#la1y5u3dvi)" filter="url(#b2zvzgq7fj)" mask="url(#uf3ckvfvpf)"></circle><circle cx="16.4" cy="17.7" r="7.5" fill="url(#2dsmrlvdik)" filter="url(#a1wq161tvl)" mask="url(#uf3ckvfvpf)"></circle></g></g><use fill="#FFF" fill-opacity="0.05" xlink:href="#2eiwxjmc7m"></use></g></svg>
+                                    </a>
+                                    <div class="header-function__details">
+                                        Chủ đề
+                                    </div>
+                                </li>
+    
+                                <li class="header-function__item">
+                                    <a href="" class="header-function__link">
+                                        <span>VIP</span>
+                                    </a>
+                                    <div class="header-function__details header-function__details--vip">
+                                        Nâng cấp VIP
+                                    </div>
+                                </li>
+    
+                                <li class="header-function__item">
+                                    
+                                    <input type="file" name="uploadSong" id="upBtn">
+                                    
+                                    <label for="upBtn">
+                                        <i class="header-function__icon bi bi-upload"></i>
+                                        <div class="header-function__details">
+                                            Tải lên
+                                        </div>
+                                    </label>
+                                </li>
+    
+                                <li class="header-function__item">
+                                    
+                                        <i class="header-function__icon bi bi-gear"></i>
+                                  
+                                    <div class="header-function__details">
+                                        Cài đặt
+                                    </div>
+
+                                    <div class="header-setting">
+                                        <div class="header-setting__wrap">
+                                            <ul class="header-setting__list">
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="fa-solid fa-ban"></i>
+                                                        Danh sách chặn
+                                                    </div>                                               
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content header-setting__content-sp">
+                                                        <div class="setting__wrap-icon">
+                                                            <i class="bi bi-badge-hd-fill"></i>
+                                                            Chất lượng nhạc
+                                                        </div>
+                                                        <i class="header-setting__icon bi bi-chevron-right"></i>
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content header-setting__content-sp">
+                                                        <div class="setting__wrap-icon">
+                                                            <i class="bi bi-play-circle"></i>
+                                                            Giao diện
+                                                        </div>
+                                                        
+                                                        <i class="header-setting__icon bi bi-chevron-right"></i>
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-calendar-event-fill"></i>
+                                                        Mua code VIP
+                                                    </div>  
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="navbar-line__setting"></div>
+
+                                        <div class="header-setting__subnav">
+                                            <ul class="header-setting__list">
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-info-circle"></i>
+                                                        Giới thiệu
+                                                    </div>                                               
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-flag"></i>
+                                                        Góp ý
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-telephone"></i>
+                                                        Liên hệ
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-badge-ad-fill"></i>
+                                                        Quảng cáo
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-card-text"></i>
+                                                        Thỏa thuận sử dụng
+                                                    </div>  
+                                                </li>
+
+                                                <li class="header-setting__item">
+                                                    <div class="header-setting__content">
+                                                        <i class="bi bi-shield-check"></i>
+                                                        Chính sách bảo mật
+                                                    </div>  
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="header-function__item">
+                                    <a href="" class="header-function__link">
+                                        <img class="header-function__img"  src="./assets/img/anhdaidien.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="zm-contain grid wide">
-                    <div class="container">
-                        <div class="user">
-                           <div class="avatar-wrap">
-                                <div class="avatar">                           
-                                    <img class="avatar-img"  src="./assets/img/anhdaidien1.jpg" alt="">                        
+            <div class="zm-contain ">
+                <div class="container">
+                    <div class="user">
+                      <div class="avatar-wrap">
+                            <div class="avatar">                           
+                                <img class="avatar-img"  src="./assets/img/anhdaidien1.jpg" alt="">                        
+                        </div>
+                      </div>    
+                      <div class="update-vip__pro">
+                            <div href="#" class="zm-navbar__up-vip update-vip">Nâng cấp vip</div>
+                            <div href="#" class="zm-navbar__up-vip inport-code">Nhập CODE VIP</div>
+                            <div class="more-icon">
+                                <i class="bi bi-three-dots"></i>
+                                <div class="pen-repair more-icon__other">Khác</div>
+                                <div class="signout-wapper">
+                                    <div class="signout">
+                                        <i class="bi bi-box-arrow-right"></i>
+                                        <a href="#" class="signout-btn">Đăng xuất</a>
+                                    </div>
+                                </div>
                             </div>
-                           </div>    
-                           <div class="update-vip__pro">
-                                <div href="#" class="zm-navbar__up-vip update-vip">Nâng cấp vip</div>
-                                <div href="#" class="zm-navbar__up-vip inport-code">Nhập CODE VIP</div>
-                                <div class="more-icon">
-                                    <i class="bi bi-three-dots"></i>
-                                    <div class="pen-repair more-icon__other">Khác</div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="user-name">
+                        Lê Tiến Thành
+                    </div>
+
+                    <div class="navbar-menu">
+                        <ul class="navbar-menu__list">
+                            <li class="navbar-menu__item active">
+                                <div class="navbar-menu_link">
+                                    <a href="#" class="">Tổng quan</a>
+                                </div>
+                            </li>
+                            <li class="navbar-menu__item">
+                                <div class="navbar-menu_link">
+                                    <a href="#" class="">Bài hát</a>
+                                </div>
+                            </li>
+                            <li class="navbar-menu__item">
+                                <div class="navbar-menu_link">
+                                    <a href="#" class="">Playlists</a>
+                                </div>
+                            </li>
+                            <li class="navbar-menu__item">
+                                <div class="navbar-menu_link">
+                                    <a href="#" class="">Podcast</a>
+                                </div>
+                            </li>
+                            
+                            <div class="navbar-menu_link">
+                                <div class="more-icon navbar-menu_option">
+                                    <a href="#" class="">
+                                        <i class="navbar-menu_option-icon bi bi-three-dots"></i>
+                                    </a>
+                                    
                                     <div class="signout-wapper">
                                         <div class="signout">
                                             <i class="bi bi-box-arrow-right"></i>
@@ -350,405 +379,374 @@
                                         </div>
                                     </div>
                                 </div>
-                           </div>
-                           
-                        </div>
-    
-                        <div class="user-name">
-                            Lê Tiến Thành
-                        </div>
-
-                        <div class="navbar-menu">
-                            <ul class="navbar-menu__list">
-                                <li class="navbar-menu__item active">
-                                    <div class="navbar-menu_link">
-                                        <a href="#" class="">Tổng quan</a>
-                                    </div>
-                                </li>
-                                <li class="navbar-menu__item">
-                                    <div class="navbar-menu_link">
-                                        <a href="#" class="">Bài hát</a>
-                                    </div>
-                                </li>
-                                <li class="navbar-menu__item">
-                                    <div class="navbar-menu_link">
-                                        <a href="#" class="">Playlists</a>
-                                    </div>
-                                </li>
-                                <li class="navbar-menu__item">
-                                    <div class="navbar-menu_link">
-                                        <a href="#" class="">Podcast</a>
-                                    </div>
-                                </li>
-                                
-                                <div class="navbar-menu_link">
-                                    <div class="more-icon navbar-menu_option">
-                                        <a href="#" class="">
-                                            <i class="navbar-menu_option-icon bi bi-three-dots"></i>
-                                        </a>
-                                        
-                                        <div class="signout-wapper">
-                                            <div class="signout">
-                                                <i class="bi bi-box-arrow-right"></i>
-                                                <a href="#" class="signout-btn">Đăng xuất</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </ul>
-                        </div>
-
-                        <div class="container-header__wrap">
-                            <div class="container-header">
-                                <h3 class="container-header__title">
-                                    Bài Hát
-                                </h3>
-                                <a href="#" class="container-header__btn">
-                                    <span>Tất cả</span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </a>
-                            </div>
-
-                            <div class="container-header__actions">
-                                <div class="upload_btn">
-                                    <input type="file" name="uploadSong" id="upBtn">                                      
-                                    <label for="upBtn">
-                                        <i class="header-function__icon container-header__icon-btn bi bi-upload"></i>
-                                        <span>Tải lên</span>
-                                    </label>
-                                </div>
-                                <div class="container-header__play-btn">
-                                    <i class="bi bi-caret-right-fill"></i>
-                                    Phát Tất Cả
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="section container__playmusic">
-                            <ul class="container__slider">
-                                <li class="container__slider-items first">
-                                    <img class="container__slider-img" src="./assets/img/photo-1612151855475-877969f4a6cc.png" alt="">
-                                </li>
-                                <li class="container__slider-items second">
-                                    <img class="container__slider-img" src="./assets/img/photo-1612151855475-877969f4a6cc.png" alt="">
-                                </li>
-                                <li class="container__slider-items third">
-                                    <img class="container__slider-img" src="./assets/img/photo-1612151855475-877969f4a6cc.png" alt="">
-                                </li>
-                                
-                            </ul>
-                            <div class="container__playlist">
-                                <div class="playlist-song"></div>
                             </div>
                             
+                        </ul>
+                    </div>
+
+                    <div class="container-header__wrap">
+                        <div class="container-header">
+                            <h3 class="container-header__title">
+                                Bài Hát
+                            </h3>
+                            <a href="#" class="container-header__btn">
+                                <span>Tất cả</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
                         </div>
 
-                        <div class="section playlist-section row">
-                            <div class="col l-12">
-                                <div class="container-header mb-16">
-                                    <h3 class="container-header__title df">
-                                        Playlist
-                                        <i class="bi bi-chevron-right next-btn"></i>
-                                    </h3>
-                                </div>
+                        <div class="container-header__actions">
+                            <div class="upload_btn">
+                                <input type="file" name="uploadSong" id="upBtn">                                      
+                                <label for="upBtn">
+                                    <i class="header-function__icon container-header__icon-btn bi bi-upload"></i>
+                                    <span>Tải lên</span>
+                                </label>
                             </div>
-
-                            <div class="col l-12">
-                                <div class="slider">
-                                    <div class="slider-wrap">
-                                        
-                                    </div>
-                                </div>
-
+                            <div class="container-header__play-btn">
+                                <i class="bi bi-caret-right-fill"></i>
+                                Phát Tất Cả
                             </div>
                         </div>
-
-                        <div class="section album-section">
-                            <div class="col l-12">
-                                <div class="container-header mb-16">
-                                    <h3 class="container-header__title">
-                                        Album 
-                                        <i class="bi bi-chevron-right next-btn"></i>
-                                    </h3>
-                                </div>
+                    </div>
+                    
+                    <div class="section container__playmusic">
+                        <div class="sliders">
+                          <div class="slider__wrapper">
+                  
+                            <div class="slider__item first">
+                              <div class="slider__item--image">
+                                <img src="http://127.0.0.1:5500/img4.jpeg" alt="">
+                              </div>
                             </div>
-
-                            <div class="col l-12">
-                                <div class="slider">
-                                    <div class="slider-wrap">
-                                        <div class="slider-items">
-                                            <div class="creat-lits">
-                                                <i class="bi bi-plus"></i>
-                                                <span>Tạo playlist mới</span>
-                                            </div>
-                                        </div>
-                                        <div class="slider-items">
-                                            <div class="playlists-show__item">
-                                                <div class="playlists-show__item-wrap">
-                                                    <div class="playlists-show__menu-play">
-                                                        <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
-                                                        <i class="playlist-songs__icon bi bi-heart-fill"></i>
-                                                        <div class="menu-play__wrap">
-                                                            <div class="menu-play">
-                                                                <i class="bi bi-play-fill"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="more-icon menu-play__more-icon">
-                                                            <i class="bi bi-three-dots"></i>
-                                                            <div class="pen-repair more-icon__other menu-play__other">Khác</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
-                                                        
-                                                        <div class="playlists-show__item-layout"></div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="playlists-show__info">
-                                                    <div class="playlists-show__info-title">
-                                                        Những Bài Hát Hay Nhất Của Sơn Tùng MTP
-                                                    </div>
-                                                    <div class="playlists-show__info-soure">
-                                                        Zing MP3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-items">
-                                            <div class="playlists-show__item">
-                                                <div class="playlists-show__item-wrap">
-                                                    <div class="playlists-show__menu-play">
-                                                        <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
-                                                        <i class="playlist-songs__icon bi bi-heart-fill"></i>
-                                                        <div class="menu-play__wrap">
-                                                            <div class="menu-play">
-                                                                <i class="bi bi-play-fill"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="more-icon menu-play__more-icon">
-                                                            <i class="bi bi-three-dots"></i>
-                                                            <div class="pen-repair more-icon__other menu-play__other">Khác</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
-                                                        
-                                                        <div class="playlists-show__item-layout"></div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="playlists-show__info">
-                                                    <div class="playlists-show__info-title">
-                                                        Những Bài Hát Hay Nhất Của Sơn Tùng MTP
-                                                    </div>
-                                                    <div class="playlists-show__info-soure">
-                                                        Zing MP3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-items">
-                                            <div class="playlists-show__item">
-                                                <div class="playlists-show__item-wrap">
-                                                    <div class="playlists-show__menu-play">
-                                                        <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
-                                                        <i class="playlist-songs__icon bi bi-heart-fill"></i>
-                                                        <div class="menu-play__wrap">
-                                                            <div class="menu-play">
-                                                                <i class="bi bi-play-fill"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="more-icon menu-play__more-icon">
-                                                            <i class="bi bi-three-dots"></i>
-                                                            <div class="pen-repair more-icon__other menu-play__other">Khác</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
-                                                        
-                                                        <div class="playlists-show__item-layout"></div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="playlists-show__info">
-                                                    <div class="playlists-show__info-title">
-                                                        Những Bài Hát Hay Nhất Của Sơn Tùng MTP
-                                                    </div>
-                                                    <div class="playlists-show__info-soure">
-                                                        Zing MP3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-items">
-                                            <div class="playlists-show__item">
-                                                <div class="playlists-show__item-wrap">
-                                                    <div class="playlists-show__menu-play">
-                                                        <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
-                                                        <i class="playlist-songs__icon bi bi-heart-fill"></i>
-                                                        <div class="menu-play__wrap">
-                                                            <div class="menu-play">
-                                                                <i class="bi bi-play-fill"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="more-icon menu-play__more-icon">
-                                                            <i class="bi bi-three-dots"></i>
-                                                            <div class="pen-repair more-icon__other menu-play__other">Khác</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
-                                                        
-                                                        <div class="playlists-show__item-layout"></div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="playlists-show__info">
-                                                    <div class="playlists-show__info-title">
-                                                        Những Bài Hát Hay Nhất Của Sơn Tùng MTP
-                                                    </div>
-                                                    <div class="playlists-show__info-soure">
-                                                        Zing MP3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-items">
-                                            <div class="playlists-show__item">
-                                                <div class="playlists-show__item-wrap">
-                                                    <div class="playlists-show__menu-play">
-                                                        <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
-                                                        <i class="playlist-songs__icon bi bi-heart-fill"></i>
-                                                        <div class="menu-play__wrap">
-                                                            <div class="menu-play">
-                                                                <i class="bi bi-play-fill"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="more-icon menu-play__more-icon">
-                                                            <i class="bi bi-three-dots"></i>
-                                                            <div class="pen-repair more-icon__other menu-play__other">Khác</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
-                                                        
-                                                        <div class="playlists-show__item-layout"></div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="playlists-show__info">
-                                                    <div class="playlists-show__info-title">
-                                                        Những Bài Hát Hay Nhất Của Sơn Tùng MTP
-                                                    </div>
-                                                    <div class="playlists-show__info-soure">
-                                                        Zing MP3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                  
+                            <div class="slider__item second">
+                              <div class="slider__item--image">
+                                <img src="http://127.0.0.1:5500/img2.jpeg" alt="">
+                              </div>
                             </div>
+                  
+                            <div class="slider__item third">
+                              <div class="slider__item--image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScbtNFUnxcD7KSCSLrrdPj1_zYdU99Lh1CUHgVqGh7foDBUyoCla6_kG6s1lrM3zTDaJM&usqp=CAU" alt="">
+                              </div>
+                            </div>
+                  
+                            <div class="slider__item fourth">
+                              <div class="slider__item--image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpHnIvq29MtWOZHDj8JnpeDRO26azjnYe5Q&usqp=CAU" alt="">
+                              </div>
+                            </div>
+                  
+                          </div>
                         </div>
-
-
-                        <!-- <div style="height: 1000px;"></div> -->
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="player grid dfs">
-            <div class="player-info df">
-                <div class="playlist-songs__info player-info__wrap">
-                    <div class="playlist-songs__thumb player-info__thumb">
-                        <img src="./assets/img/photo-1612151855475-877969f4a6cc.png" alt="">
-                    </div>
-                    <div class="playlist-songs__name">
-                        <span class="playlist-songs__name-song">
-                            Lý do anh xuất hiện
-                        </span>
-                        <span class="playlist-songs__name-singer">
-                             Tân Trần
-                         </span>
-                    </div>
-                </div>
-
-                <div class="playlist-songs__time player-info__songs">
-                    <i class="playlist-songs__icon bi bi-heart"></i>
-                    <div class="player-info__icon">
-                        <i class="bi bi-three-dots"></i>
-                        <div class="pen-repair more-icon__other player-info--more">Xem thêm</div>
+                        <div class="container__playlist">
+                            <div class="playlist-song"></div>
+                        </div>
                         
                     </div>
-               </div>
-            </div>
 
-            <div class="player-control">
-                <div class="player-control__btns df">
-                    <button class="player-control__btn btn-random">
-                        <i class="bi bi-shuffle"></i>
-                    </button>
-                    <button class="player-control__btn btn-pre">
-                        <i class="bi bi-skip-start-fill"></i>
-                    </button>
-                    <button class="player-control__btn btn-play">
-                        <i class="bi bi-play-fill icon-play"></i>
-                        <i class="bi bi-pause icon-pause"></i>
-                    </button>
-                    <button class="player-control__btn btn-next">
-                        <i class="bi bi-skip-end-fill"></i>
-                    </button>
-                    <button class="player-control__btn btn-repeat">
-                        <i class="bi bi-arrow-repeat"></i>
-                    </button>
-                </div>
-                <div class="progress-block dfs">
-                    <span class="start-time">00:00</span>
-                    <div class="progress-line">
-                        <input type="range" class="progress" value="5" step="0.1" min="0" max="100">
-                        <div class="progress__track song--track">
-                            <div class="progress__track-update" ></div>
+                    <div class="section playlist-section row">
+                        <div class="col l-12">
+                            <div class="container-header mb-16">
+                                <h3 class="container-header__title df">
+                                    Playlist
+                                    <i class="bi bi-chevron-right next-btn"></i>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="col l-12">
+                            <div class="slider">
+                                <div class="slider-wrap">
+                                    
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <span class="end-time">00:00</span>
-                </div>
-                
-                <audio id="audio" src=" "></audio>
-            </div>
 
-            <div class="player-option">
-                <div class="player-option__mv">
-                    <i class="bi bi-camera-video"></i>
-                </div>
-                <div class="player-option__mic">
-                    <i class="player-option__icon bi bi-mic"></i>
-                </div>
-                <div class="player-option__full-screen">
-                    <i class="player-option__icon bi bi-arrows-fullscreen"></i>
-                </div>
-                <div class="player-option__volume">
-                    <i class="player-option__icon bi bi-volume-up"></i>
-                </div>
-                <div class="player-option__progress-volume">
-                        <input type="range" class="progress" value="0" step="1" min="0" max="100">
-                        <div class="progress__track volume--track">
-                            <div class="progress__track-update" ></div>
+                    <div class="section album-section">
+                        <div class="col l-12">
+                            <div class="container-header mb-16">
+                                <h3 class="container-header__title">
+                                    Album 
+                                    <i class="bi bi-chevron-right next-btn"></i>
+                                </h3>
+                            </div>
                         </div>
-                </div>
-                <div class="player-option__note-list">
-                    <i class="player-option__icon bi bi-music-note-list"></i>
+
+                        <div class="col l-12">
+                            <div class="slider">
+                                <div class="slider-wrap">
+                                    <div class="slider-items">
+                                        <div class="creat-lits">
+                                            <i class="bi bi-plus"></i>
+                                            <span>Tạo playlist mới</span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-items">
+                                        <div class="playlists-show__item">
+                                            <div class="playlists-show__item-wrap">
+                                                <div class="playlists-show__menu-play">
+                                                    <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
+                                                    <i class="playlist-songs__icon bi bi-heart-fill"></i>
+                                                    <div class="menu-play__wrap">
+                                                        <div class="menu-play">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="more-icon menu-play__more-icon">
+                                                        <i class="bi bi-three-dots"></i>
+                                                        <div class="pen-repair more-icon__other menu-play__other">Khác</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
+                                                    
+                                                    <div class="playlists-show__item-layout"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="playlists-show__info">
+                                                <div class="playlists-show__info-title">
+                                                    Những Bài Hát Hay Nhất Của Sơn Tùng MTP
+                                                </div>
+                                                <div class="playlists-show__info-soure">
+                                                    Zing MP3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-items">
+                                        <div class="playlists-show__item">
+                                            <div class="playlists-show__item-wrap">
+                                                <div class="playlists-show__menu-play">
+                                                    <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
+                                                    <i class="playlist-songs__icon bi bi-heart-fill"></i>
+                                                    <div class="menu-play__wrap">
+                                                        <div class="menu-play">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="more-icon menu-play__more-icon">
+                                                        <i class="bi bi-three-dots"></i>
+                                                        <div class="pen-repair more-icon__other menu-play__other">Khác</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
+                                                    
+                                                    <div class="playlists-show__item-layout"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="playlists-show__info">
+                                                <div class="playlists-show__info-title">
+                                                    Những Bài Hát Hay Nhất Của Sơn Tùng MTP
+                                                </div>
+                                                <div class="playlists-show__info-soure">
+                                                    Zing MP3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-items">
+                                        <div class="playlists-show__item">
+                                            <div class="playlists-show__item-wrap">
+                                                <div class="playlists-show__menu-play">
+                                                    <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
+                                                    <i class="playlist-songs__icon bi bi-heart-fill"></i>
+                                                    <div class="menu-play__wrap">
+                                                        <div class="menu-play">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="more-icon menu-play__more-icon">
+                                                        <i class="bi bi-three-dots"></i>
+                                                        <div class="pen-repair more-icon__other menu-play__other">Khác</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
+                                                    
+                                                    <div class="playlists-show__item-layout"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="playlists-show__info">
+                                                <div class="playlists-show__info-title">
+                                                    Những Bài Hát Hay Nhất Của Sơn Tùng MTP
+                                                </div>
+                                                <div class="playlists-show__info-soure">
+                                                    Zing MP3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-items">
+                                        <div class="playlists-show__item">
+                                            <div class="playlists-show__item-wrap">
+                                                <div class="playlists-show__menu-play">
+                                                    <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
+                                                    <i class="playlist-songs__icon bi bi-heart-fill"></i>
+                                                    <div class="menu-play__wrap">
+                                                        <div class="menu-play">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="more-icon menu-play__more-icon">
+                                                        <i class="bi bi-three-dots"></i>
+                                                        <div class="pen-repair more-icon__other menu-play__other">Khác</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
+                                                    
+                                                    <div class="playlists-show__item-layout"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="playlists-show__info">
+                                                <div class="playlists-show__info-title">
+                                                    Những Bài Hát Hay Nhất Của Sơn Tùng MTP
+                                                </div>
+                                                <div class="playlists-show__info-soure">
+                                                    Zing MP3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-items">
+                                        <div class="playlists-show__item">
+                                            <div class="playlists-show__item-wrap">
+                                                <div class="playlists-show__menu-play">
+                                                    <!-- <i class="playlist-songs__icon bi bi-heart"></i> -->
+                                                    <i class="playlist-songs__icon bi bi-heart-fill"></i>
+                                                    <div class="menu-play__wrap">
+                                                        <div class="menu-play">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="more-icon menu-play__more-icon">
+                                                        <i class="bi bi-three-dots"></i>
+                                                        <div class="pen-repair more-icon__other menu-play__other">Khác</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: url('/assets/img/playlist/playlist_1.png') no-repeat center center / cover" class="img-square playlists-show__item-img">         
+                                                    
+                                                    <div class="playlists-show__item-layout"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="playlists-show__info">
+                                                <div class="playlists-show__info-title">
+                                                    Những Bài Hát Hay Nhất Của Sơn Tùng MTP
+                                                </div>
+                                                <div class="playlists-show__info-soure">
+                                                    Zing MP3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- <div style="height: 1000px;"></div> -->
                 </div>
             </div>
         </div>
+      </div>
+      <div class="player container-fluid dfs">
+          <div class="player-info df">
+              <div class="playlist-songs__info player-info__wrap">
+                  <div class="playlist-songs__thumb player-info__thumb">
+                      <img src="./assets/img/photo-1612151855475-877969f4a6cc.png" alt="">
+                  </div>
+                  <div class="playlist-songs__name">
+                      <span class="playlist-songs__name-song">
+                          Lý do anh xuất hiện
+                      </span>
+                      <span class="playlist-songs__name-singer">
+                          Tân Trần
+                      </span>
+                  </div>
+              </div>
 
+              <div class="playlist-songs__time player-info__songs">
+                  <i class="playlist-songs__icon bi bi-heart"></i>
+                  <div class="player-info__icon">
+                      <i class="bi bi-three-dots"></i>
+                      <div class="pen-repair more-icon__other player-info--more">Xem thêm</div>
+                      
+                  </div>
+            </div>
+          </div>
+
+          <div class="player-control">
+              <div class="player-control__btns df">
+                  <button class="player-control__btn btn-random">
+                      <i class="bi bi-shuffle"></i>
+                  </button>
+                  <button class="player-control__btn btn-pre">
+                      <i class="bi bi-skip-start-fill"></i>
+                  </button>
+                  <button class="player-control__btn btn-play">
+                      <i class="bi bi-play-fill icon-play"></i>
+                      <i class="bi bi-pause icon-pause"></i>
+                  </button>
+                  <button class="player-control__btn btn-next">
+                      <i class="bi bi-skip-end-fill"></i>
+                  </button>
+                  <button class="player-control__btn btn-repeat">
+                      <i class="bi bi-arrow-repeat"></i>
+                  </button>
+              </div>
+              <div class="progress-block dfs">
+                  <span class="start-time">00:00</span>
+                  <div class="progress-line">
+                      <input type="range" class="progress" value="5" step="0.1" min="0" max="100">
+                      <div class="progress__track song--track">
+                          <div class="progress__track-update" ></div>
+                      </div>
+                  </div>
+                  <span class="end-time">00:00</span>
+              </div>
+              
+              <audio id="audio" src=" "></audio>
+          </div>
+
+          <div class="player-option">
+              <div class="player-option__mv">
+                  <i class="bi bi-camera-video"></i>
+              </div>
+              <div class="player-option__mic">
+                  <i class="player-option__icon bi bi-mic"></i>
+              </div>
+              <div class="player-option__full-screen">
+                  <i class="player-option__icon bi bi-arrows-fullscreen"></i>
+              </div>
+              <div class="player-option__volume">
+                  <i class="player-option__icon bi bi-volume-up"></i>
+              </div>
+              <div class="player-option__progress-volume">
+                      <input type="range" class="progress" value="0" step="1" min="0" max="100">
+                      <div class="progress__track volume--track">
+                          <div class="progress__track-update" ></div>
+                      </div>
+              </div>
+              <div class="player-option__note-list">
+                  <i class="player-option__icon bi bi-music-note-list"></i>
+              </div>
+          </div>
+      </div>
         <!-- <div style="height: 1000px;" class="zm-footer"> -->
     </div>
-    
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
@@ -762,8 +760,12 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
+    
+    
     <script src="./assets/javascript/slick-slider.js"></script>
     
     <script src="./assets/javascript/main.js"></script>
-</body>
+    
+    <script src="./assets/javascript/slider-infiniti.js" ></script>
+  </body>
 </html>

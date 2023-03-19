@@ -253,6 +253,26 @@ const app = {
         </div>`
     },
 
+    renderSliderInfinity: function() {
+      const htmls = this.songs.map(song => (
+        `
+        <div class="slider__item fourth">
+          <div class="slider__item--image">
+            <img src="${song.img}" alt="">
+          </div>
+        </div>
+        `
+      ))
+      
+      document.querySelector('.slider__wrapper').innerHTML = htmls.join('');
+      document.querySelectorAll('.slider__item')[0].classList.remove('fourth')
+      document.querySelectorAll('.slider__item')[0].classList.add('first')
+      document.querySelectorAll('.slider__item')[1].classList.remove('fourth')
+      document.querySelectorAll('.slider__item')[1].classList.add('second')
+      document.querySelectorAll('.slider__item')[2].classList.remove('fourth')
+      document.querySelectorAll('.slider__item')[2].classList.add('third')
+    },
+
     defineproperties: function() {
         Object.defineProperty(this, 'currentSong', {
             get: function() {
@@ -334,8 +354,6 @@ const app = {
 
     },
 
-	
-
     loadCurrentSong: function() {
 
         thumbInfo.src = this.currentSong.img;
@@ -353,24 +371,24 @@ const app = {
         };
     },
 
-	fancyTimeFormat: function(duration)
-	{   
-		// Hours, minutes and seconds
-		var hrs = Math.floor(duration / 3600);
-		var mins = Math.floor((duration % 3600) / 60);
-		var secs = Math.floor(duration % 60);
+    fancyTimeFormat: function(duration)
+    {   
+      // Hours, minutes and seconds
+      var hrs = Math.floor(duration / 3600);
+      var mins = Math.floor((duration % 3600) / 60);
+      var secs = Math.floor(duration % 60);
 
-		// Output like "1:01" or "4:03:59" or "123:03:59"
-		var ret = "";
+      // Output like "1:01" or "4:03:59" or "123:03:59"
+      var ret = "";
 
-		if (hrs > 0) {
-			ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-		}
+      if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+      }
 
-		ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-		ret += "" + secs;
-		return ret;
-	},
+      ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+      ret += "" + secs;
+      return ret;
+    },
 
     nextSong: function() {
         this.currentIndex++;
@@ -394,8 +412,6 @@ const app = {
         // Định nghĩa các thuộc tính cho Object
         this.defineproperties();
 
-        
-
         // Lắng nghe xử lý các sự kiện
         this.handleEvent();
 
@@ -408,6 +424,7 @@ const app = {
         // this.nextSong()
         this.renderPlayList();
         this.renderItemsNew();
+        this.renderSliderInfinity();
     }
 }
 

@@ -1,0 +1,142 @@
+:root {
+  --back-color: #32323d;
+  --white-color: #fff;
+  --primary-color: #432275;
+  --violet-color: #7200a1;
+  --border-color: #2f2638;
+  --color-text-primary: #fff;
+  --color-text-secondary: #dadada;
+  --color-main-bg: #ffdb00;
+  --background-hover: hsla(0,0%,100%,0.1);
+  --playerControl-height: 90px;
+  --creatList-height: 58px;
+  --navMunu-height: 275px;
+  --header-height: 70px;
+  --navbarCategories-height: calc(100vh - var(--playerControl-height) - var(--creatList-height) - var(--navMunu-height));
+
+  --search-color: #2e2739;
+
+  --offset-x-second: calc(0px - ((230px - (230px * var(--scale-rate-second))) / 2 + 20px));
+  --offset-x-third: calc(0px - ((230px - (230px * var(--scale-rate-third))) / 2 + 40px));
+  --scale-rate-second: calc(196 / 230);
+  --scale-rate-third: calc(162 / 230);
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.4rem;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+.d-none {
+  display: none;
+}
+.top-xs {
+  align-items: flex-start;
+}
+.center-xs {
+  justify-content: center;
+}
+.bottom-xs {
+  align-items: flex-end;
+}
+.start-xs {
+  justify-content: flex-start;
+}
+.middle-xs {
+  align-items: center;
+}
+.end-xs {
+  justify-content: flex-end;
+}
+.fd-column {
+  flex-direction: column;
+}
+.ta-center {
+  text-align: center;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+i {
+  display: inline-block;
+}
+
+.alc {
+  align-items: center;
+}
+
+.tlc {
+  text-align: center;
+}
+
+.dfs {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+img {
+  display: block;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.tt-up {
+  text-transform: uppercase;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.p-fixed {
+  position: fixed;
+}
+.c-gap-13 {
+  column-gap: 13px;
+}
+.r-gap-10 {
+  row-gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.mb-14 {
+  margin-bottom: 14px;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.between-xs {
+  justify-content: space-between;
+}
+.c-pointer {
+  cursor: pointer;
+}
+.h-100 {
+  height: 100%;
+}
